@@ -1,0 +1,65 @@
+.popup {
+  position: fixed;
+  padding: map-get($spacing-unit, "small");
+  background: map-get($colors, "white");
+  transition: 0.5s;
+  box-shadow: 10px 9px 1px map-get($colors, "box-shadow");
+  width: calc(100% - 4em);
+  left: map-get($spacing-unit, "small");
+  right: map-get($spacing-unit, "small");
+  border-radius: 10px;
+
+  &.hide {
+    bottom: -425px;
+  }
+
+  &.visible {
+    bottom: map-get($spacing-unit, "small");
+  }
+}
+
+.popup__title {
+  margin-bottom: map-get($spacing-unit, "small");
+}
+
+.popup__form {
+  transition: 0.9s;
+
+  &.hide {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &.visible {
+    max-height: 200px;
+    margin-bottom: map-get($spacing-unit, "small");
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    padding: map-get($spacing-unit, "tiny");
+    margin-bottom: map-get($spacing-unit, "small");
+  }
+}
+
+.popup__actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popup {
+    width: 25%;
+  }
+}

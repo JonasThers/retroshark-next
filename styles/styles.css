@@ -1,3 +1,84 @@
+.popup {
+  position: fixed;
+  padding: 1rem;
+  background: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 10px 9px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 10px 9px 1px rgba(0, 0, 0, 0.08);
+  width: calc(100% - 4em);
+  left: 1rem;
+  right: 1rem;
+  border-radius: 10px;
+}
+
+.popup.hide {
+  bottom: -425px;
+}
+
+.popup.visible {
+  bottom: 1rem;
+}
+
+.popup__title {
+  margin-bottom: 1rem;
+}
+
+.popup__form {
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.popup__form.hide {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.popup__form.visible {
+  max-height: 200px;
+  margin-bottom: 1rem;
+}
+
+.popup__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup__form input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.popup__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popup {
+    width: 25%;
+  }
+}
+
 body {
   background: #049cd8;
 }
