@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
@@ -7,6 +8,7 @@ export default function Contact() {
         <title>Retroshark - Contact</title>
       </Head>
       Contact
+      <ContactForm />
     </div>
   );
 }
