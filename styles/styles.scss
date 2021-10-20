@@ -1,0 +1,7 @@
+@import "./maps/colors";
+@import "./maps/spacing-units";
+@import "./maps/font-sizes";
+
+body {
+    background: map-get($colors, 'background');
+}

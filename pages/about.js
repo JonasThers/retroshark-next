@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 
-export default function Contact() {
+export default function About() {
   return (
     <div>
       <Head>
-        <title>Retroshark - Contact</title>
+        <title>Retroshark - About</title>
       </Head>
-      Contact
+      About
     </div>
   );
 }
