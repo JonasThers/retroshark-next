@@ -1,7 +1,7 @@
 export default function Footer() {
-  return (
-    <div>
-     Footer
-    </div>
-  )
+
+  const d = new Date();
+  let year = d.getFullYear();
+
+  return <div>All Rights Saved {year}</div>;
 };
