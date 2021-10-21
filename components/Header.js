@@ -11,13 +11,13 @@ export default function Header() {
       </h3>
       <nav>
       <Link href="/">
-        <div>Home</div>
+        Home
       </Link>
       <Link href="/about">
-        <div>About</div>
+        About
       </Link>
       <Link href="/contact">
-        <div>Contact</div>
+        Contact
       </Link>
       </nav>
     </div>
