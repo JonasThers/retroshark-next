@@ -80,7 +80,7 @@ export default function ContactForm() {
           {errors.messageRequired && <span className="error">Nothing on your mind?</span>}
         </div>
         <div className="contact-form__actions">
-        <button type="submit" className="contact-button">Send</button>
+        <button type="submit" className="btn accept contact-button">Send</button>
         </div>
       </form>
       <div>{formMessage}</div>

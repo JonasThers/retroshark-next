@@ -53,14 +53,14 @@ export default function Popup() {
             <div>Sit back, relax and look forward to amazing newsletters!</div>
           )}
 
-          <button type="submit">Sign me up</button>
+          <button type="submit" className="btn accept">Sign me up</button>
         </form>
       </div>
       <div className="popup__actions">
-        <button className="accept-button" onClick={() => setPopupContent(true)}>
+        <button className="btn accept" onClick={() => setPopupContent(true)}>
           Yes please!
         </button>
-        <button className="decline-button" onClick={closePopup}>
+        <button className="btn decline" onClick={closePopup}>
           No thanks!
         </button>
       </div>

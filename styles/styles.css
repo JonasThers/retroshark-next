@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
 }
 
 .popup {
@@ -197,7 +198,27 @@ nav a {
   }
 }
 
+.btn {
+  padding: 0.5rem 2rem;
+  border: 0;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+.btn :hover {
+  cursor: pointer;
+}
+
+.accept {
+  background-color: #FACD00;
+}
+
+.decline {
+  background-color: #E52521;
+}
+
 body {
-  background: #049cd8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#049cd8), to(white)) fixed;
+  background: linear-gradient(#049cd8 0%, white 100%) fixed;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,18 @@
+.btn {
+    padding: map-get($spacing-unit, "tiny") map-get($spacing-unit, "medium");
+    border: 0;
+    color: map-get($colors, "white");
+    text-shadow: 2px 2px map-get($colors, "black");
+
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.accept {
+    background-color: map-get($colors, "yellow");
+}
+
+.decline {
+    background-color: map-get($colors, "red");
+}

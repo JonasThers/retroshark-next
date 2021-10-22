@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <div>
       <div>All Rights Saved {year}</div>
-      <button onClick={openPopup}>Newsletter</button>
+      <button onClick={openPopup} className="btn accept">Newsletter</button>
     </div>
   );
 }
