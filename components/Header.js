@@ -3,12 +3,10 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div>
-      <Link href="/">
-        <h1>Retroshark</h1>
+      <div className="navigation">
+       <Link href="/">
+        <h1 className="title">Retroshark</h1>
       </Link>
-      <h3>
-        Good ol' <br /> retrogaming
-      </h3>
       <nav>
       <Link href="/">
         Home
@@ -20,6 +18,10 @@ export default function Header() {
         Contact
       </Link>
       </nav>
+      </div>
+      <h3 className="sub-title">
+        Good ol' <br /> retrogaming
+      </h3>
     </div>
   );
 }
