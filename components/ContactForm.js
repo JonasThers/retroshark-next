@@ -41,35 +41,47 @@ export default function ContactForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(sendEmail)}>
+      <form className="contact-form" onSubmit={handleSubmit(sendEmail)}>
         <input type="hidden" name="contact_number" />
-        <input
-          id="standard-basic"
-          label="Name*"
-          name="name"
-          {...register("nameRequired", { required: true })}
-        />
-        {errors.nameRequired && <span>This field is required</span>}
-        <input
-          id="standard-basic"
-          label="E-mail*"
-          name="email"
-          {...register("emailRequired", {
-            required: true,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            },
-          })}
-        />
-        {errors.emailRequired && <span>Valid email is required</span>}
-        <input
-          id="standard-basic"
-          label="Phone*"
-          name="phone"
-          {...register("phoneRequired", { required: true })}
-        />
-        {errors.phoneRequired && <span>Valid phone number is required</span>}
-        <button type="submit">Send</button>
+        <div className="contact-form__input">
+          <input
+            id="standard-basic"
+            label="Name*"
+            placeholder="Your name"
+            name="name"
+            {...register("nameRequired", { required: true })}
+          />
+          {errors.nameRequired && <span className="error">Aint got a name?</span>}
+        </div>
+        <div className="contact-form__input">
+          <input
+            id="standard-basic"
+            label="E-mail*"
+            placeholder="Your email"
+            name="email"
+            {...register("emailRequired", {
+              required: true,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              },
+            })}
+          />
+          {errors.emailRequired && <span className="error">Aint got a valid email?</span>}
+        </div>
+        <div className="contact-form__textarea">
+          <textarea
+            id="standard-basic"
+            label="Message*"
+            name="message"
+            placeholder="Your message"
+            rows="4"
+            {...register("messageRequired", { required: true })}
+          />
+          {errors.messageRequired && <span className="error">Nothing on your mind?</span>}
+        </div>
+        <div className="contact-form__actions">
+        <button type="submit" className="contact-button">Send</button>
+        </div>
       </form>
       <div>{formMessage}</div>
     </div>
