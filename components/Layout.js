@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Popup from "./Popup";
 import { PopupContext } from "./context/popupcontext";
+import Container from '@mui/material/Container';
 
 export default function Layout({ children }) {
   const [popup, setPopup] = useState(false);
@@ -11,16 +12,18 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <PopupContext.Provider
-        value={[
-          { popup, setPopup },
-          { popupContent, setPopupContent },
-        ]}
-      >
-        {children}
-        <Footer />
-        <Popup />
-      </PopupContext.Provider>
+      <Container maxWidth="lg">
+        <PopupContext.Provider
+          value={[
+            { popup, setPopup },
+            { popupContent, setPopupContent },
+          ]}
+        >
+          {children}
+          <Footer />
+          <Popup />
+        </PopupContext.Provider>
+      </Container>
     </>
   );
 }

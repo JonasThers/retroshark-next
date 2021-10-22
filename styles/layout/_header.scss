@@ -1,3 +1,7 @@
+header {
+  margin-bottom: map-get($spacing-unit, "big");
+}
+
 .navigation {
   display: flex;
   flex-direction: column;

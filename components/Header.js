@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div>
+    <header>
       <div className="navigation">
        <Link href="/">
         <h1 className="title">Retroshark</h1>
@@ -20,8 +20,8 @@ export default function Header() {
       </nav>
       </div>
       <h3 className="sub-title">
-        Good ol' <br /> retrogaming
+        Retrogaming <br /> consultancy
       </h3>
-    </div>
+    </header>
   );
 }

@@ -7,8 +7,10 @@ export default function Contact() {
       <Head>
         <title>Retroshark - Contact</title>
       </Head>
-      Contact
-      <ContactForm />
+      <div className="content">
+        <div className="content__title">Contact</div>
+        <ContactForm />
+      </div>
     </div>
   );
 }

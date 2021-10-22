@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-row-gap: map-get($spacing-unit, "small");
+    grid-template-columns: 100%;
 }
 
 .contact-form__input,
@@ -11,13 +12,13 @@
     grid-row-gap: map-get($spacing-unit, "tiny");
 
     input, textarea {
-        border: 0;
         padding: map-get($spacing-unit, "tiny");
     }
 }
 
 .error {
     color: map-get($colors, "red");
+    font-size: map-get($font-sizes, "small");
 }
 
 @media (min-width: 768px) {
