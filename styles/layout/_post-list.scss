@@ -1,0 +1,26 @@
+.post-list {
+    display: grid;
+    grid-row-gap: map-get($spacing-unit, "small");
+    grid-template-columns: 100%;
+}
+
+.post-list__post:hover {
+    cursor: pointer;
+}
+
+.post-list__post--image {
+    width: 100%;
+}
+
+.post-list__post--title {
+    margin-top: map-get($spacing-unit, "small");
+    text-align: center;
+    line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+    .post-list {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: map-get($spacing-unit, "medium");
+    }
+}

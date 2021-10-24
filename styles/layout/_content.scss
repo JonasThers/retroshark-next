@@ -1,17 +1,30 @@
 .content {
-    background: map-get($colors, "white");
-    padding: map-get($spacing-unit, "small");
-    border-radius: 10px;
-    box-shadow: 10px 9px 1px map-get($colors, "box-shadow");
+  background: map-get($colors, "white");
+  padding: map-get($spacing-unit, "small");
+  border-radius: 10px;
+  box-shadow: 10px 9px 1px map-get($colors, "box-shadow");
 }
 
 .content__title {
-    text-align: center;
-    margin-bottom: map-get($spacing-unit, "big");
+  text-align: center;
+  margin-bottom: map-get($spacing-unit, "big");
+}
+
+.content__text {
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: map-get($font-sizes, "small");
+}
+
+.content__image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  margin-bottom: map-get($spacing-unit, "medium");
 }
 
 @media (min-width: 768px) {
-    .content {
-        padding: map-get($spacing-unit, "medium");
-    }
+  .content {
+    padding: map-get($spacing-unit, "medium");
+  }
 }
