@@ -20,7 +20,7 @@ export default function Header() {
       </nav>
       </div>
       <h3 className="sub-title">
-        Retrogaming <br /> consultancy
+        Retro gaming <br /> consultancy
       </h3>
     </header>
   );

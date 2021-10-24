@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { PopupContext } from "./context/popupcontext";
+import Link from "next/link";
 
 export default function Footer() {
   const [{ popup, setPopup }, { popupContent, setPopupContent }] =
@@ -14,9 +15,25 @@ export default function Footer() {
   let year = d.getFullYear();
 
   return (
-    <div>
-      <div>All Rights Saved {year}</div>
-      <button onClick={openPopup} className="btn accept">Newsletter</button>
-    </div>
+    <footer className="footer-content">
+      <div className="footer-content__logo">
+        <h3>Retroshark</h3>
+        <h4>- Retro Gaming Consultancy</h4>
+      </div>
+      <div className="footer-content__links">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+      </div>
+      <div className="footer-content__newsletter">
+        <div className="footer-content__newsletter--title">
+          Interested in our newsletter?
+        </div>
+        <button onClick={openPopup} className="btn accept">
+          Newsletter
+        </button>
+      </div>
+      <div className="footer-content__rights">All Rights Saved {year}</div>
+    </footer>
   );
 }

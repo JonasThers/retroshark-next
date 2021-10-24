@@ -3,6 +3,7 @@
     border: 0;
     color: map-get($colors, "white");
     text-shadow: 2px 2px map-get($colors, "black");
+    border-radius: 5px;
 
     :hover {
         cursor: pointer;

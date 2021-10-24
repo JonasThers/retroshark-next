@@ -20,10 +20,15 @@
 
 .popup__title {
   margin-bottom: map-get($spacing-unit, "small");
+  text-align: center;
 }
 
 .popup__form {
   transition: 0.9s;
+
+  .error {
+    margin-bottom: map-get($spacing-unit, "small");
+  }
 
   &.hide {
     max-height: 0;
@@ -47,9 +52,13 @@
 }
 
 .popup__actions {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  display: grid;
+  grid-row-gap: map-get($spacing-unit, "small");
+}
+
+.success {
+  font-size: map-get($font-sizes, "small");
+  margin-bottom: map-get($spacing-unit, "small");
 }
 
 @media (min-width: 768px) {

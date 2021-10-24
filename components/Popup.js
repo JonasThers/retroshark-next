@@ -48,9 +48,9 @@ export default function Popup() {
               },
             })}
           />
-          {errors.email && errors.email.message}
+          {errors.email && <span className="error">We kinda need a valid email for this</span>}
           {signUp && (
-            <div>Sit back, relax and look forward to amazing newsletters!</div>
+            <div className="success">Sit back, relax and look forward to amazing newsletters!</div>
           )}
 
           <button type="submit" className="btn accept">Sign me up</button>
