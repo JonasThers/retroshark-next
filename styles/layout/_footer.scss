@@ -6,6 +6,8 @@
     box-shadow: 10px 9px 1px map-get($colors, "box-shadow");
     display: grid;
     grid-row-gap: map-get($spacing-unit, "small");
+    border: 1px solid map-get($colors, "gray");
+    margin-bottom: map-get($spacing-unit, "medium");;
 }
 
 .footer-content__logo h3 {
@@ -34,6 +36,7 @@
 
 .footer-content__rights {
     text-align: center;
+    margin-top: map-get($spacing-unit, "medium");
 }
 
 @media (min-width: 768px) {

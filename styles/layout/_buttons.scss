@@ -5,10 +5,10 @@
     text-shadow: 2px 2px map-get($colors, "black");
     border-radius: 5px;
     font-size: map-get($font-sizes, "default");
+}
 
-    :hover {
-        cursor: pointer;
-    }
+.btn:hover {
+    cursor: pointer;
 }
 
 .accept {

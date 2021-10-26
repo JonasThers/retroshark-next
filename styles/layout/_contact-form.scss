@@ -10,6 +10,7 @@
     grid-row: span 1;
     display: grid;
     grid-row-gap: map-get($spacing-unit, "tiny");
+    grid-template-columns: 100%;
 
     input, textarea {
         padding: map-get($spacing-unit, "tiny");

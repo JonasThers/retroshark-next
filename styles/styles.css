@@ -16,6 +16,7 @@
   left: 1rem;
   right: 1rem;
   border-radius: 10px;
+  border: 1px solid #E0E0E0;
 }
 
 .popup.hide {
@@ -104,6 +105,8 @@
   display: -ms-grid;
   display: grid;
   grid-row-gap: 0.5rem;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
 }
 
 .contact-form__input input, .contact-form__input textarea,
@@ -216,7 +219,7 @@ nav a {
   font-size: 16px;
 }
 
-.btn :hover {
+.btn:hover {
   cursor: pointer;
 }
 
@@ -234,6 +237,7 @@ nav a {
   border-radius: 10px;
   -webkit-box-shadow: 10px 9px 1px rgba(0, 0, 0, 0.08);
           box-shadow: 10px 9px 1px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E0E0E0;
 }
 
 .content__title {
@@ -254,6 +258,11 @@ nav a {
   margin-bottom: 2rem;
 }
 
+.content__button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
   .content {
     padding: 2rem;
@@ -270,6 +279,8 @@ nav a {
   display: -ms-grid;
   display: grid;
   grid-row-gap: 1rem;
+  border: 1px solid #E0E0E0;
+  margin-bottom: 2rem;
 }
 
 .footer-content__logo h3 {
@@ -299,6 +310,7 @@ nav a {
 
 .footer-content__rights {
   text-align: center;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -382,6 +394,58 @@ nav a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+.text-block {
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.text-block__text {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.text-block__img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .text-block {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .text-block:nth-of-type(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .text-block__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

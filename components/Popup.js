@@ -27,6 +27,10 @@ export default function Popup() {
   const [{ popup, setPopup }, { popupContent, setPopupContent }] =
     useContext(PopupContext);
 
+  const openForm = () => {
+    
+  }
+
   const closePopup = () => {
     setPopup(false);
     setPopupContent(false);

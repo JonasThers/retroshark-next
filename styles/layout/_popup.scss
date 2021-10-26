@@ -8,6 +8,7 @@
   left: map-get($spacing-unit, "small");
   right: map-get($spacing-unit, "small");
   border-radius: 10px;
+  border: 1px solid map-get($colors, "gray");
 
   &.hide {
     bottom: -425px;

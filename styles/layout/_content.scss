@@ -3,6 +3,7 @@
   padding: map-get($spacing-unit, "small");
   border-radius: 10px;
   box-shadow: 10px 9px 1px map-get($colors, "box-shadow");
+  border: 1px solid map-get($colors, "gray");
 }
 
 .content__title {
@@ -21,6 +22,11 @@
   height: auto;
   max-height: 400px;
   margin-bottom: map-get($spacing-unit, "medium");
+}
+
+.content__button {
+  text-align: center;
+  margin-top: map-get($spacing-unit, "medium");
 }
 
 @media (min-width: 768px) {

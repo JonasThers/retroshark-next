@@ -74,7 +74,7 @@ export default function ContactForm() {
             label="Message*"
             name="message"
             placeholder="Your message"
-            rows="4"
+            rows="9"
             {...register("messageRequired", { required: true })}
           />
           {errors.messageRequired && <span className="error">Nothing on your mind?</span>}
