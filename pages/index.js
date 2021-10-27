@@ -7,6 +7,21 @@ import turbografx from "../public/turbografx.jpg";
 import Link from "next/link";
 
 export default function Home() {
+  const textBlocks = [
+    {
+      imgUrl: dreamcast.src,
+      text: "Just bought a new Dreamcast, but you dont know what great games to get for it?",
+    },
+    {
+      imgUrl: turbografx.src,
+      text: "Want to buy a Turbografx-16, but afraid to get ripped off by people selling it for overprice?",
+    },
+    {
+      imgUrl: snes.src,
+      text: "Want to sell your old Super Nintendo, but dont know how much you can allow to charge for it?",
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -14,25 +29,24 @@ export default function Home() {
       </Head>
       <Hero />
       <div className="content">
-        <TextBlock
-          img={dreamcast.src}
-          content="Just bought a new Dreamcast, but you dont know what great games to get for it?"
-        />
-        <TextBlock
-          img={turbografx.src}
-          content="Want to buy a Turbografx-16, but afraid to get ripped off by people selling it for overprice?"
-        />
-        <TextBlock
-          img={snes.src}
-          content="Want to sell your old Super Nintendo, but dont know how much you can allow to charge for it?"
-        />
+        {textBlocks.map((textBlock, index) => {
+          return (
+            <TextBlock
+              key={index}
+              img={textBlock.imgUrl}
+              content={textBlock.text}
+            />
+          );
+        })}
         <p className="content__text">
           I'll make sure that you're all good to go to enjoy all the great
           classics out there!
         </p>
         <p className="content__text">
           So in case you're tired of Bowser ruining your retro gaming
-          experience, <b /><br />then...
+          experience,
+          <br />
+          then...
         </p>
         <div className="content__button">
           <Link href="/contact">

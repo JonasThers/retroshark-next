@@ -24,11 +24,24 @@
     .text-block:nth-of-type(2) {
         display: flex;
         flex-direction: row-reverse;
+
+       img {
+            width: 50%;
+        }
     }
 
     .text-block__text {
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+}
+
+@media (min-width: 1028px) {
+    .text-block:nth-of-type(2) {
+
+       img {
+            width: 60%;
+        }
     }
 }
