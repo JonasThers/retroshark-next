@@ -73,7 +73,7 @@
 }
 
 .success {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 1rem;
 }
 
@@ -117,7 +117,7 @@
 
 .error {
   color: #E52521;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -248,7 +248,7 @@ nav a {
 .content__text {
   text-align: center;
   line-height: 1.5rem;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .content__image {
