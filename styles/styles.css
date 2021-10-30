@@ -456,6 +456,51 @@ nav a {
   }
 }
 
+.post-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post-actions__prev button,
+.post-actions__next button {
+  width: 100%;
+}
+
+.post-actions__next {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .post-actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .post-actions__next button,
+  .post-actions__prev button {
+    width: auto;
+  }
+  .post-actions__next {
+    margin-top: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#049cd8), to(white)) fixed;
   background: linear-gradient(#049cd8 0%, white 100%) fixed;

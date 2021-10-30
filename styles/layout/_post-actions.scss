@@ -1,0 +1,32 @@
+.post-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-actions__prev button,
+.post-actions__next button {
+    width: 100%;
+}
+
+.post-actions__next {
+    margin-top: map-get($spacing-unit, "small");
+}
+
+@media (min-width: 768px) {
+    .post-actions {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .post-actions__next button,
+    .post-actions__prev button {
+        width: auto;
+    }
+
+    .post-actions__next {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

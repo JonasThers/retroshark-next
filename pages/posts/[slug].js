@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import PostActions from "../../components/PostActions";
 
 export default function Post({ post }) {
   return (
@@ -19,6 +20,7 @@ export default function Post({ post }) {
           <h4>No img atmn</h4>
         )}
         <p className="content__text">{post.Content}</p>
+        <PostActions slug={post.Slug} />
       </div>
     </div>
   );
