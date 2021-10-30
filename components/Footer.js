@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { PopupContext } from "./context/popupcontext";
+import Navigation from "./Navigation";
 import Link from "next/link";
 
 export default function Footer() {
@@ -21,9 +22,7 @@ export default function Footer() {
         <h4>- Retro Gaming Consultancy</h4>
       </div>
       <div className="footer-content__links">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+        <Navigation />
       </div>
       <div className="footer-content__newsletter">
         <div className="footer-content__newsletter--title">
