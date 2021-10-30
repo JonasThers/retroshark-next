@@ -256,6 +256,8 @@ nav a {
   height: auto;
   max-height: 400px;
   margin-bottom: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .content__button {
@@ -337,6 +339,11 @@ nav a {
 
 .post-list__post--image {
   width: 100%;
+  height: auto;
+  max-height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .post-list__post--title {
@@ -350,6 +357,9 @@ nav a {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
+  }
+  .post-list__post--image {
+    max-height: 300px;
   }
 }
 
