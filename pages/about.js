@@ -17,7 +17,7 @@ export default function About({ posts }) {
                   {post.Image ? (
                     <img
                       className="post-list__post--image"
-                      src={"https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`}
+                      src={process.env.API + `${post.Image.url}`}
                       alt="Segun Adebayo"
                     />
                   ) : (

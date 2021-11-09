@@ -13,7 +13,7 @@ export default function Post({ post }) {
         {post && post.Image ? (
           <img
             className="content__image"
-            src={"https://calm-ocean-22227.herokuapp.com" + `${post ? post.Image.url : '' }`}
+            src={process.env.API + `${post ? post.Image.url : '' }`}
             alt="Segun Adebayo"
           />
         ) : (
