@@ -3,6 +3,7 @@ import Link from "next/link";
 import PostActions from "../../components/PostActions";
 
 export default function Post({ post }) {
+  console.log("https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`)
   return (
     <div>
       <Head>
@@ -13,7 +14,7 @@ export default function Post({ post }) {
         {post && post.Image ? (
           <img
             className="content__image"
-            src={"https://calm-ocean-22227.herokuapp.com" + `${post ? post.Image.url : '' }`}
+            src={"https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`}
             alt="Segun Adebayo"
           />
         ) : (
