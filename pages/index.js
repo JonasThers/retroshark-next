@@ -39,11 +39,11 @@ export default function Home() {
           );
         })}
         <p className="content__text">
-          I'll make sure that you're all good to go to enjoy all the great
+          I&apos;ll make sure that you&apos;re all good to go to enjoy all the great
           classics out there!
         </p>
         <p className="content__text">
-          So in case you're tired of Bowser ruining your retro gaming
+          So in case you`&apos;`re tired of Bowser ruining your retro gaming
           experience,
           <br />
           then...

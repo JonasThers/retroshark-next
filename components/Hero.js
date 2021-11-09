@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="hero">
       <h2 className="hero__title">
-        Get the help you need with good ol' gaming
+        Get the help you need with good ol&apos; gaming
       </h2>
       <div className="hero__actions">
         <Link href="/about">
