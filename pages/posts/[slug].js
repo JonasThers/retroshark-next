@@ -6,21 +6,21 @@ export default function Post({ post }) {
   return (
     <div>
       <Head>
-        <title>Retroshark - {post.Title}</title>
+        <title>Retroshark - {post ? post.Title : ''}</title>
       </Head>
       <div className="content">
-        <div className="content__title">{post.Title}</div>
-        {post.Image ? (
+        <div className="content__title">{post ? post.Title : ''}</div>
+        {post && post.Image ? (
           <img
             className="content__image"
-            src={"https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`}
+            src={"https://calm-ocean-22227.herokuapp.com" + `${post ? post.Image.url : '' }`}
             alt="Segun Adebayo"
           />
         ) : (
           <h4>No img atmn</h4>
         )}
-        <p className="content__text">{post.Content}</p>
-        <PostActions slug={post.Slug} />
+        <p className="content__text">{post ? post.Content : ''}</p>
+        <PostActions slug={post ? post.Slug : ''} />
       </div>
     </div>
   );
