@@ -3,6 +3,8 @@ import Link from "next/link";
 import PostActions from "../../components/PostActions";
 
 export default function Post({ post }) {
+  console.log("test")
+  console.log(process.env.API + `${post.Image.url}`)
   return (
     <div>
       <Head>
@@ -13,7 +15,7 @@ export default function Post({ post }) {
         {post.Image ? (
           <img
             className="content__image"
-            src={"http://localhost:1337" + `${post.Image.url}`}
+            src={"https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`}
             alt="Segun Adebayo"
           />
         ) : (
@@ -27,7 +29,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:1337/posts");
+  const res = await fetch(process.env.API + "/posts");
   const posts = await res.json();
 
   const paths = posts.map((post) => ({
@@ -43,7 +45,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const res = await fetch("http://localhost:1337" + `/posts?Slug=${slug}`);
+  const res = await fetch(process.env.API + `/posts?Slug=${slug}`);
   const data = await res.json();
   const post = data[0];
 

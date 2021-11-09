@@ -17,7 +17,7 @@ export default function About({ posts }) {
                   {post.Image ? (
                     <img
                       className="post-list__post--image"
-                      src={"http://localhost:1337" + `${post.Image.url}`}
+                      src={"https://calm-ocean-22227.herokuapp.com" + `${post.Image.url}`}
                       alt="Segun Adebayo"
                     />
                   ) : (
@@ -34,7 +34,7 @@ export default function About({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:1337/posts");
+  const res = await fetch(process.env.API + "/posts");
   const posts = await res.json();
 
   return {

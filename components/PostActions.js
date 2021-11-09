@@ -7,7 +7,7 @@ export default function PostActions(props) {
   const [currentPage, setCurrentPage] = useState(null);
 
   useEffect(async () => {
-    const result = await axios("http://localhost:1337/posts");
+    const result = await axios("https://calm-ocean-22227.herokuapp.com/posts");
 
     setPosts(result.data);
   }, [props.slug]);
