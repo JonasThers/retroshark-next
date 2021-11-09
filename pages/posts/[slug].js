@@ -3,8 +3,6 @@ import Link from "next/link";
 import PostActions from "../../components/PostActions";
 
 export default function Post({ post }) {
-  console.log("test")
-  console.log(process.env.API + `${post.Image.url}`)
   return (
     <div>
       <Head>

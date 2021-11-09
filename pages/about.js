@@ -12,8 +12,8 @@ export default function About({ posts }) {
         <div className="post-list">
           {posts &&
             posts.map((post, index) => (
-              <Link href={"/posts/" + post.Slug}>
-                <div className="post-list__post" key={index}>
+              <Link href={"/posts/" + post.Slug} key={index}>
+                <div className="post-list__post">
                   {post.Image ? (
                     <img
                       className="post-list__post--image"
