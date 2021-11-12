@@ -215,6 +215,8 @@ nav a {
   border: 0;
   color: #fff;
   text-shadow: 2px 2px #000;
+  -webkit-box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   font-size: 16px;
 }
